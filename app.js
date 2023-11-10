@@ -1,18 +1,7 @@
-console.log('Starting');
+const express = require('express');
 
-setTimeout(() => {
-  console.log('2 seconds timer');
-}, 2000);
+const app = express();
 
-const geocode = (callback) => {
-  setTimeout(() => {
-    console.log('0 second timer');
-    callback({ lat: 0, lon: 0 });
-  }, 0);
-};
-
-geocode((data) => {
-  console.log(data);
+app.listen(5000, () => {
+  console.log('App is running on PORT', 5000);
 });
-
-console.log('Stopping');
